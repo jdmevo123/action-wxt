@@ -32,7 +32,7 @@ curl \
     -X POST \
     -H "Authorization:Bearer ${TOKEN}" \
     --form "roomId=${ROOMID}" \
-    --form "markdown=${MESSAGE}" \
+#     --form "markdown=${MESSAGE}" \
     --form "attachments=${attachments}" \
     ${URL}
 }

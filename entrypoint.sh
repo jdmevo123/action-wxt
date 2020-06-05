@@ -31,9 +31,11 @@ _wxt_message() {
 curl \
     -X POST \
     -H "Authorization:Bearer ${TOKEN}" \
-    --form "roomId=${ROOMID}" \
-    --form "text="Project Update" \
-    --form "attachments=${attachments}" \
+    -H "Content-Type: application/json"
+    -d '{"attachments":${attachments}, "roomId":${ROOMID} ,"text":"Project Update"}'
+#     --form "roomId=${ROOMID}" \
+#     --form "text="Project Update" \
+#     --form "attachments=${attachments}" \
     ${URL}
 }
 
